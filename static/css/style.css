@@ -1,13 +1,14 @@
 
-.container-5 {
+.container {
     text-align: center;
-    width: 70%;
-    margin: 10px auto;
-    box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
+    width: 80vw;
+    height: 91vh;
+    margin: 27px auto;
+    box-shadow: 0px 7px 10px 0px rgb(0 0 0 / 75%);
     color: white;
 }
 
-.container-5::before {
+.container::before {
     content: '';
     background: url('https://media.istockphoto.com/vectors/vector-realistic-isolated-green-poker-table-for-decoration-vector-id1299608766?k=20&m=1299608766&s=612x612&w=0&h=ZwlBIc1B5noT2uVZG9yighu1FLc5NoeWrk3KloKsdKM=') 
         no-repeat center center/cover;
@@ -20,40 +21,44 @@
     z-index: -1;
 }
 
+#game-name {
+    width: 50%;
+    margin: 7px auto;
+    padding: 9px;
+    box-shadow: 0px 7px 10px 0px rgb(0 0 0 / 75%);
+    background: darkseagreen;
+    color: darkslategrey;
+    font-size: 2.5vw;
+}
+
 .flex-blackjack-row-1, 
 .flex-blackjack-row-2, .flex-blackjack-row-3{
     display: flex;
     flex-direction: row;
     padding: 10px;
-    /* border: 1px solid black; */
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-#game-name {
-    width: 32%;
-    margin: 7px auto;
-    padding: 10px;
-    box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
-    background: darkseagreen;
-    color: darkslategrey;
 }
 
 h3 div {
     color: black;
 }
 
+#your-box h2, #dealer-box h2 {
+    font-size: 3vw;
+}
 
 .flex-blackjack-row-1 div {
-    height: 300px;
+    height: 46vh;
     flex: 1;
     border: 2px solid darkseagreen;
     padding: 10px;
 }
 
 .flex-blackjack-row-1 img {
-    width: 25%;
-    padding: 10px;
+    width: 6.5vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
 }
 
 .flex-blackjack-row-2 button {
