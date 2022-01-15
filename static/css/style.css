@@ -4,6 +4,9 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    
     text-align: center;
     width: 80vw;
     height: 91vh;
