@@ -1,0 +1,32 @@
+@media only screen and (max-width: 630px) {
+   
+    .container {
+        height: 89vh;
+    }
+
+    .flex-blackjack-row-1 img {
+        width: 9.5vw;
+    }
+
+    .flex-blackjack-row-2 {
+        flex-direction: column;
+    }
+
+    .flex-blackjack-row-2 button {
+        width: 68vw;
+        margin: 13px 0px 10px;
+    }
+    
+    .flex-blackjack-row-1 div {
+        height: 30vh;
+    }
+
+    table {
+        margin: 17px; 
+    }
+
+    #blackjack-result {
+        width: 22%;
+        font-size: 2.5vw;
+    }
+}
