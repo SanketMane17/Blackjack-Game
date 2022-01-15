@@ -49,20 +49,23 @@ function sleep(ms) {
 async function blackjackStand() {
     blackjackGame['isStand'] = true;
 
-    while (DEALER['score'] <= 15 && blackjackGame['isStand'] === true) {
-        let card = randomCard();
-        showCard(card, DEALER);
-        updateScore(card, DEALER);
-        showScore(DEALER);
-        await sleep(700);
-    }
+    if (blackjackGame['turnsOver'] === false) {
 
-    if (DEALER['score'] > 15) {
-        blackjackGame['turnsOver'] = true;
+        while (DEALER['score'] <= 15 && blackjackGame['isStand'] === true) {
+            let card = randomCard();
+            showCard(card, DEALER);
+            updateScore(card, DEALER);
+            showScore(DEALER);
+            await sleep(700);
+        }
 
-        // Making sound effect for win, loss, draw and result
-        let winner = computerWinner();
-        showResult(winner);
+        if (DEALER['score'] > 15) {
+            blackjackGame['turnsOver'] = true;
+
+            // Making sound effect for win, loss, draw and result
+            let winner = computerWinner();
+            showResult(winner);
+        }
     }
 }
 
@@ -94,7 +97,7 @@ function blackjackDeal() {
         document.querySelector('#blackjack-result').textContent = "Let's Play";
         document.querySelector('#blackjack-result').style.color = 'black ';
 
-        blackjackGame['turnsOver'] = true;
+        blackjackGame['turnsOver'] = false;
     }
 }
 
@@ -198,6 +201,7 @@ function showResult(winner) {
             document.querySelector('#draws').textContent = blackjackGame['draws'];
         }
 
-        document.querySelector('#blackjack-result').innerHTML = "<div style='color: " + messageColor + ";width: 15%;margin: auto;margin-top:10px;background-color: aliceblue;padding: 2px;font-size: 1.5vw;;border-radius: 18px;'>" + message + "</div>";
+        document.querySelector('#blackjack-result').textContent = message;
+        document.querySelector('#blackjack-result').style.color = messageColor;
     }
 }
