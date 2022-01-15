@@ -198,6 +198,6 @@ function showResult(winner) {
             document.querySelector('#draws').textContent = blackjackGame['draws'];
         }
 
-        document.querySelector('#blackjack-result').innerHTML = "<div style='color: " + messageColor + ";width: 15%;margin: auto;margin-top:16px;background-color: aliceblue;padding: 3px;font-size: 18px;border-radius: 15px;'>" + message + "</div>";
+        document.querySelector('#blackjack-result').innerHTML = "<div style='color: " + messageColor + ";width: 15%;margin: auto;margin-top:10px;background-color: aliceblue;padding: 2px;font-size: 1.5vw;;border-radius: 18px;'>" + message + "</div>";
     }
 }
