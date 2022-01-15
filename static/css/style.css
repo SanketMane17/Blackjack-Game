@@ -1,9 +1,13 @@
 
+body {
+    box-sizing: border-box;
+}
+
 .container {
     text-align: center;
     width: 80vw;
     height: 91vh;
-    margin: 27px auto;
+    margin: 25px auto;
     box-shadow: 0px 7px 10px 0px rgb(0 0 0 / 75%);
     color: white;
 }
@@ -20,6 +24,16 @@
     height: 100vh;
     z-index: -1;
 }
+#blackjack-result {
+    color: black;
+    width: 15%;
+    margin: auto;
+    margin-top:10px;
+    background-color: aliceblue;
+    padding: 2px;
+    font-size: 1.5vw;
+    border-radius: 18px;
+}
 
 #game-name {
     width: 50%;
@@ -31,12 +45,10 @@
     font-size: 2.5vw;
 }
 
-.flex-blackjack-row-1, 
-.flex-blackjack-row-2, .flex-blackjack-row-3{
+.flex-blackjack-row-1, .flex-blackjack-row-3{
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    flex-wrap: wrap;
+    padding: 5px;
     justify-content: space-around;
 }
 
@@ -61,16 +73,17 @@ h3 div {
     padding-bottom: 1vw;
 }
 
+.flex-blackjack-row-2 {
+    display: flex;
+    justify-content: center;
+}
+
 .flex-blackjack-row-2 button {
-    margin-right: 5px;
-}
-
-.flex-blackjack-row-2 div {
-    padding: 10px;
-}
-
-.flex-blackjack-row-3 {
-    border: none;
+    background: red;
+    color: white;
+    padding: 1vh 27px;
+    margin: 14px;
+    width: 14vw;
 }
 
 table {
@@ -78,7 +91,7 @@ table {
 }
 
 table, th, td {
-    padding: 3px 33px;
+    padding: 1px 2vw;
     background: white;
     color: red;
     border-radius: 9px;
